@@ -7,7 +7,7 @@
 
 2. Get cacheBitmap
     ```kotlin
-    cachingLayoiut?.getCacheBitmap { iv_captured?.setImageBitmap(it) }
+    cachingLayout?.getCacheBitmap { iv_captured?.setImageBitmap(it) }
     ```
 
 3. Get cacheFile
