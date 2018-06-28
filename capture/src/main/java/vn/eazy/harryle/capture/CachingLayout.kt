@@ -24,7 +24,7 @@ class CachingLayout : FrameLayout {
     private var cachingViewObserverListener: CachingViewObserverListener? = null
 
     fun getCacheBitmap(callback: (bitmap: Bitmap?) -> Any?) {
-        if (layoutParams.width == -1 || layoutParams.height == -1) {
+        if (width <= 0 || height <= 0) {
             cachingViewObserverListener = CachingViewObserverListener(this, callback)
             viewTreeObserver.addOnGlobalLayoutListener(cachingViewObserverListener)
         } else {
